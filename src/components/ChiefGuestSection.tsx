@@ -1,11 +1,12 @@
-import { motion } from "framer-motion";
-import { Award, Building2, Sparkles } from "lucide-react";
+import { motion } from 'framer-motion';
+import { Award, Building2, Sparkles } from 'lucide-react';
+import chiefGuestPhoto from '@/assets/logos/placeholder.png';
 
 const ChiefGuestSection = () => {
   return (
     <section className="relative py-24 overflow-hidden">
       <div className="magical-particles opacity-30" />
-      
+
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -33,9 +34,11 @@ const ChiefGuestSection = () => {
                 {/* Avatar placeholder with glow */}
                 <div className="relative">
                   <div className="w-40 h-40 rounded-full bg-gradient-to-br from-primary via-magenta to-secondary p-1 animate-glow-pulse">
-                    <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-                      <Sparkles className="w-16 h-16 text-primary" />
-                    </div>
+                    <img
+                      src={chiefGuestPhoto}
+                      alt="Chief Guest"
+                      className="w-full h-full rounded-full object-cover"
+                    />
                   </div>
                   <div className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-primary flex items-center justify-center">
                     <Award className="w-6 h-6 text-primary-foreground" />
@@ -49,13 +52,15 @@ const ChiefGuestSection = () => {
                   </h3>
                   <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
                     <Building2 className="w-5 h-5 text-primary" />
-                    <span className="text-primary font-display text-lg">CEO, SuperBryn Company</span>
+                    <span className="text-primary font-display text-lg">
+                      CEO, SuperBryn Company
+                    </span>
                   </div>
                   <p className="text-muted-foreground font-body text-lg leading-relaxed">
-                    A visionary leader driving innovation in the technology sector. 
-                    Neethu Maryam brings a wealth of experience in entrepreneurship 
-                    and will share insights on leadership, innovation, and the 
-                    future of women in technology.
+                    A visionary leader driving innovation in the technology
+                    sector. Neethu Maryam brings a wealth of experience in
+                    entrepreneurship and will share insights on leadership,
+                    innovation, and the future of women in technology.
                   </p>
                 </div>
               </div>
