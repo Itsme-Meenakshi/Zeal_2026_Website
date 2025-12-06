@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { AlertCircle, BookOpen, Laptop, Shield, Trophy, Users } from "lucide-react";
+  AlertCircle,
+  BookOpen,
+  Laptop,
+  Shield,
+  Users,
+} from "lucide-react";
 
 const guidelines = [
   {
@@ -47,16 +47,6 @@ const guidelines = [
     ],
   },
   {
-    icon: Trophy,
-    title: "Competition Rules",
-    content: [
-      "External assistance or prohibited resources are not allowed; the list will be announced beforehand.",
-      "Participants must adhere to time limits and submission deadlines.",
-      "Any attempt to gain unfair advantage may result in disqualification.",
-      "Decisions made by judges and organizers will be final and binding.",
-    ],
-  },
-  {
     icon: Shield,
     title: "Safety & Certificates",
     content: [
@@ -72,8 +62,9 @@ const GuidelinesSection = () => {
   return (
     <section id="guidelines" className="relative py-24 bg-card/50">
       <div className="magical-particles opacity-20" />
-      
+
       <div className="container mx-auto px-4">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -83,45 +74,61 @@ const GuidelinesSection = () => {
         >
           <h2 className="section-title mb-4">Event Guidelines</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-body">
-            Please read and follow all guidelines to ensure a safe and enjoyable experience for everyone
+            Please read and follow all guidelines to ensure a safe and enjoyable
+            experience for everyone
           </p>
         </motion.div>
 
+        {/* Cards Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
         >
-          <Accordion type="single" collapsible className="space-y-4">
-            {guidelines.map((item, index) => (
-              <AccordionItem
+          {guidelines.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
                 key={item.title}
-                value={`item-${index}`}
-                className="gradient-border px-6 border-none"
+                whileHover={{ y: -4 }}
+                transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                className={`
+                  relative overflow-hidden rounded-2xl bg-card/70 border border-primary/20 shadow-[0_0_25px_rgba(255,79,154,0.08)]
+                  ${index === 4 ? "md:col-span-2 md:w-1/2 md:mx-auto" : ""}
+                `}
               >
-                <AccordionTrigger className="hover:no-underline py-6">
+                {/* Soft gradient edge */}
+                <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-primary/10 via-transparent to-purple-500/5" />
+
+                <div className="relative p-6 space-y-4">
+                  {/* Icon + Title */}
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
-                      <item.icon className="w-5 h-5 text-primary" />
+                    <div className="w-11 h-11 rounded-xl bg-primary/20 flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-primary" />
                     </div>
-                    <span className="font-display text-lg text-foreground">{item.title}</span>
+                    <h3 className="font-display text-xl text-foreground">
+                      {item.title}
+                    </h3>
                   </div>
-                </AccordionTrigger>
-                <AccordionContent className="pb-6">
-                  <ul className="space-y-3 pl-14">
+
+                  {/* Content list */}
+                  <ul className="space-y-3 pl-1">
                     {item.content.map((point, i) => (
-                      <li key={i} className="text-muted-foreground font-body flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        {point}
+                      <li
+                        key={i}
+                        className="text-muted-foreground font-body flex items-start gap-3"
+                      >
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                        <span>{point}</span>
                       </li>
                     ))}
                   </ul>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                </div>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

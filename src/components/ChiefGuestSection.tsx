@@ -53,14 +53,14 @@ const ChiefGuestSection = () => {
                   <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
                     <Building2 className="w-5 h-5 text-primary" />
                     <span className="text-primary font-display text-lg">
-                      CEO, SuperBryn Company
+                      Co-Founder & CTO, SuperBryn
                     </span>
                   </div>
                   <p className="text-muted-foreground font-body text-lg leading-relaxed">
-                    A visionary leader driving innovation in the technology
-                    sector. Neethu Maryam brings a wealth of experience in
-                    entrepreneurship and will share insights on leadership,
-                    innovation, and the future of women in technology.
+                    Neethu Mariam Joy, Co-Founder and CTO of SuperBryn, is a prominent voice in the growing space of AI leadership and women-driven technology innovation. 
+                    Her work in speech recognition and voice-AI demonstrates not only technical mastery, but also a commitment to designing systems that serve people naturally and meaningfully. 
+                    She continues to shape the landscape of human-AI interaction while inspiring young engineers to lead confidently in emerging tech spaces. 
+                    Her presence at ZEAL reflects a celebration of capability, clarity, and creative intelligence.
                   </p>
                 </div>
               </div>

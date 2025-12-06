@@ -7,8 +7,11 @@ const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#tracks', label: 'Tracks' },
   { href: '#guidelines', label: 'Guidelines' },
+  { href: '#team', label: 'Team' },
   { href: '#contact', label: 'Contact' },
 ];
+
+const REGISTER_URL = 'https://forms.gle/XZGnDEGJXu9vip1p6';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -77,8 +80,9 @@ const Navbar = () => {
                   {link.label}
                 </button>
               ))}
+              {/* 🔗 Desktop Register Button → Google Form */}
               <a
-                href="https://ieeesbmits.in/"
+                href={REGISTER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block"
@@ -126,13 +130,15 @@ const Navbar = () => {
                     {link.label}
                   </button>
                 ))}
+
+                {/* 🔗 Mobile Register Button → Google Form */}
                 <a
-                  href="https://ieeesbmits.in/"
+                  href={REGISTER_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block"
+                  className="inline-block mt-4"
                 >
-                  <Button variant="hero" size="xl" className="group">
+                  <Button variant="hero" size="xl" className="group w-full">
                     <Sparkles className="w-5 h-5 group-hover:animate-spin" />
                     Register Now
                   </Button>

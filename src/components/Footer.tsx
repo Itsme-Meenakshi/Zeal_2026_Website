@@ -18,23 +18,21 @@ const Footer = () => {
             </p>
           </div>
 
+          {/* Updated Organized By */}
           <div className="flex items-center gap-4">
             <span className="text-muted-foreground font-body text-sm">
               Organized by
             </span>
-            <div className="flex items-center gap-3">
-              <span className="px-3 py-1 rounded-full bg-primary/20 text-primary font-display text-xs tracking-wider">
-                IEEE SB MITS
-              </span>
-              <span className="px-3 py-1 rounded-full bg-secondary/20 text-secondary font-display text-xs tracking-wider">
-                IEEE WIE
+            <div>
+              <span className="px-3 py-1 rounded-full bg-pink-600/30 text-pink-400 border border-pink-500 font-display text-xs tracking-wider shadow-[0_0_12px_#ff2d7aa8]">
+                IEEE WIE AG MITS
               </span>
             </div>
           </div>
 
           <div className="text-center md:text-right">
             <a 
-              href="https://ieeesbmits.in" 
+              href="https://forms.gle/XZGnDEGJXu9vip1p6" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-primary hover:text-primary-glow transition-colors font-body"

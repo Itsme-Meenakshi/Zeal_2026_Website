@@ -25,16 +25,25 @@ const ContactSection = () => {
             </p>
 
             <div className="space-y-4">
-              <Button
-                variant="hero"
-                size="xl"
-                className="w-full sm:w-auto group"
+              {/* 🔗 Register button → Google Form */}
+              <a
+                href="https://forms.gle/XZGnDEGJXu9vip1p6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-block"
               >
-                <Sparkles className="w-5 h-5 group-hover:animate-spin" />
-                Register Now
-              </Button>
+                <Button
+                  variant="hero"
+                  size="xl"
+                  className="w-full sm:w-auto group"
+                >
+                  <Sparkles className="w-5 h-5 group-hover:animate-spin" />
+                  Register Now
+                </Button>
+              </a>
+
               <p className="text-sm text-muted-foreground font-body">
-                Limited seats available. Early bird registration closes soon!
+                {/* optional helper text if you want later */}
               </p>
             </div>
           </motion.div>
@@ -61,10 +70,10 @@ const ContactSection = () => {
                       Phone
                     </p>
                     <a
-                      href="tel:923234342"
+                      href="tel:9778422456"
                       className="text-foreground font-body text-lg hover:text-primary transition-colors"
                     >
-                      +91 9923234442
+                      +91 9778422456
                     </a>
                   </div>
                 </div>
@@ -78,10 +87,10 @@ const ContactSection = () => {
                       Email
                     </p>
                     <a
-                      href="mailto:ieeesbh@gmail.com"
+                      href="mailto:ieeesbmits@gmail.com"
                       className="text-foreground font-body text-lg hover:text-secondary transition-colors break-all"
                     >
-                      ieeesbh@gmail.com
+                      ieeesbmits@gmail.com
                     </a>
                   </div>
                 </div>
@@ -98,7 +107,7 @@ const ContactSection = () => {
                       Muthoot Institute of Technology & Science
                       <br />
                       <span className="text-muted-foreground">
-                        Kochi, Kerala
+                        Varikoli, Kochi, Kerala
                       </span>
                     </p>
                   </div>
