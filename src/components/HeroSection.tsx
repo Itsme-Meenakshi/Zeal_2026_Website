@@ -1,17 +1,17 @@
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Calendar, MapPin, Sparkles } from 'lucide-react';
-import heroBg from '@/assets/hero-bg.jpg';
-import wieLogo from '@/assets/logos/IEEE logo nobackground.png';
-import ieeeLogo from '@/assets/logos/IEEE_WIE_White.png';
-import mitsLogo from '@/assets/logos/mits_logo.png';
-import sponsorLogo from '@/assets/logos/ieee sb logo white.png';
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Calendar, MapPin, Sparkles } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
+import wieLogo from "@/assets/logos/IEEE logo nobackground.png";
+import ieeeLogo from "@/assets/logos/IEEE_WIE_White.png";
+import mitsLogo from "@/assets/logos/mits_logo.png";
+import sponsorLogo from "@/assets/logos/ieee sb logo white.png";
 
 const HeroSection = () => {
   const scrollToTracks = () => {
-    const section = document.getElementById('tracks');
+    const section = document.getElementById("tracks");
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -29,34 +29,37 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        {/* === ZEAL title styled like poster === */}
+        {/* ZEAL – tall, tight like poster */}
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="
-            font-display 
-            uppercase 
-            font-black 
-            leading-none
-            text-[18vw] 
-            sm:text-[14vw] 
-            md:text-[9rem]
-            mb-4 
-            mt-[40px]
-          "
+          className="mb-2 mt-[50px]"
           style={{
-            background:
-              'linear-gradient(180deg, #ffffff 0%, #f6f0f4 40%, #ff2d7a 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            // very subtle shadow just to pop off the bg
-            filter: 'drop-shadow(0 0 4px rgba(0,0,0,0.6))',
-            letterSpacing: '0.02em', // very small tracking, close to the reference
+            fontFamily: '"Bebas Neue", system-ui, sans-serif',
+            fontWeight: 900,
+            textTransform: "uppercase",
+            fontSize: "18vw",          // big + vertical look
+            lineHeight: 0.82,
+            letterSpacing: "-0.07em",  // squeeze letters together hard
+            textRendering: "geometricPrecision",
           }}
         >
-          ZEAL
+          <span
+            style={{
+              display: "inline-block",
+              transform: "scaleY(1.22)",           // stretch vertically
+              transformOrigin: "center",
+              background:
+                "linear-gradient(180deg, #ffffff 5%, #f7e6f0 40%, #ff2d7a 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              filter: "drop-shadow(0 0 6px rgba(0,0,0,0.7))",
+            }}
+          >
+            ZEAL
+          </span>
         </motion.h1>
 
         {/* Glowing Subtitle */}
@@ -150,14 +153,8 @@ const HeroSection = () => {
           className="flex flex-wrap items-center justify-center gap-16 mt-[100px]"
         >
           {[wieLogo, ieeeLogo, mitsLogo, sponsorLogo].map((logo, i) => (
-            <div
-              key={i}
-              className="w-28 h-16 flex items-center justify-center"
-            >
-              <img
-                src={logo}
-                className="max-h-full max-w-full object-contain"
-              />
+            <div key={i} className="w-28 h-16 flex items-center justify-center">
+              <img src={logo} className="max-h-full max-w-full object-contain" />
             </div>
           ))}
         </motion.div>

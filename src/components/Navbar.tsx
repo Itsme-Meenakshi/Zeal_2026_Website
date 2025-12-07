@@ -40,18 +40,24 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
-            <a
-              href="#"
-              className="font-display text-2xl font-bold text-white"
-            >
+
+            {/* 🔥 ZEAL Poster Style Logo */}
+            <a href="#" className="font-display text-2xl font-bold">
               <span
-                className="inline-block"
                 style={{
+                  fontFamily: '"Bebas Neue", sans-serif',
+                  textTransform: "uppercase",
+                  letterSpacing: "-0.07em",
+                  display: "inline-block",
+                  transform: "scaleY(1.22)",
                   background:
-                    'linear-gradient(180deg, white 0%, #ff2d7a 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
+                    "linear-gradient(180deg, #ffffff 0%, #f9e6ec 40%, #ff2d7a 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  filter: "drop-shadow(0 0 6px rgba(0,0,0,0.75))",
+                  textRendering: "geometricPrecision",
+                  fontSize: "1.8rem",
+                  lineHeight: 1,
                 }}
               >
                 ZEAL
