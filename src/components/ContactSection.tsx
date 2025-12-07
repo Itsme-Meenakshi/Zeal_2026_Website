@@ -20,7 +20,7 @@ const ContactSection = () => {
             <h2 className="section-title mb-6">Ready to Join?</h2>
             <p className="text-muted-foreground text-lg font-body mb-8 leading-relaxed">
               Embark on an extraordinary journey of learning, innovation, and
-              empowerment. Register now to secure your spot at ZEAL 2025 and be
+              empowerment. Register now to secure your spot at ZEAL 2026 and be
               part of something amazing.
             </p>
 
