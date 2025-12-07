@@ -29,20 +29,31 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        {/* Title – ZEAL gradient like poster */}
+        {/* === ZEAL title styled like poster === */}
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="font-display text-7xl md:text-9xl font-black tracking-[0.25em] mb-2 mt-[50px] uppercase"
+          className="
+            font-display 
+            uppercase 
+            font-black 
+            leading-none
+            text-[18vw] 
+            sm:text-[14vw] 
+            md:text-[9rem]
+            mb-4 
+            mt-[40px]
+          "
           style={{
             background:
-              'linear-gradient(180deg, #ffffff 0%, #f9edf5 40%, #ff2d7a 100%)',
+              'linear-gradient(180deg, #ffffff 0%, #f6f0f4 40%, #ff2d7a 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-            textRendering: 'geometricPrecision',
-            filter: 'drop-shadow(0 0 12px rgba(0,0,0,0.75))',
+            // very subtle shadow just to pop off the bg
+            filter: 'drop-shadow(0 0 4px rgba(0,0,0,0.6))',
+            letterSpacing: '0.02em', // very small tracking, close to the reference
           }}
         >
           ZEAL
@@ -131,27 +142,25 @@ const HeroSection = () => {
           </span>
         </motion.div>
 
-        {/* Logos */}
         {/* Logos – equal size */}
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.1 }}
-  className="flex flex-wrap items-center justify-center gap-16 mt-[100px]"
->
-  {[wieLogo, ieeeLogo, mitsLogo, sponsorLogo].map((logo, i) => (
-    <div
-      key={i}
-      className="w-28 h-16 flex items-center justify-center"
-    >
-      <img
-        src={logo}
-        className="max-h-full max-w-full object-contain"
-      />
-    </div>
-  ))}
-</motion.div>
-
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="flex flex-wrap items-center justify-center gap-16 mt-[100px]"
+        >
+          {[wieLogo, ieeeLogo, mitsLogo, sponsorLogo].map((logo, i) => (
+            <div
+              key={i}
+              className="w-28 h-16 flex items-center justify-center"
+            >
+              <img
+                src={logo}
+                className="max-h-full max-w-full object-contain"
+              />
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
