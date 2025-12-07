@@ -13,7 +13,7 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <h2 className="section-title mb-6">About ZEAL 2025</h2>
+          <h2 className="section-title mb-6">About ZEAL 2026</h2>
 
           <p className="text-muted-foreground text-lg font-body leading-relaxed mb-5">
             ZEAL is the <span className="text-primary font-medium">flagship one-day summit </span> 
