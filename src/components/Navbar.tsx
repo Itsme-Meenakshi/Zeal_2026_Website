@@ -41,16 +41,16 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
 
-            {/* 🔥 ZEAL Logo Image */}
+            {/* 🔥 Smaller ZEAL Logo */}
             <a href="#" className="flex items-center">
               <img
                 src="/logo/ZEAL LOGO.png"
                 alt="ZEAL Logo"
-                className="h-10 md:h-14 w-auto object-contain drop-shadow-[0_0_10px_rgba(0,0,0,0.8)]"
+                className="h-7 md:h-10 w-auto object-contain drop-shadow-[0_0_10px_rgba(0,0,0,0.8)]"
               />
             </a>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Links */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map(link => (
                 <button
@@ -63,7 +63,7 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Mobile Menu Icon */}
+            {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-black/60 text-white"
