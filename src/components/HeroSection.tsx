@@ -27,31 +27,30 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        {/* 🔥 ZEAL LOGO IMAGE */}
+        {/* ZEAL LOGO IMAGE */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="mt-[70px] mb-0 flex justify-center"
+          className="mt-20 mb-1 flex justify-center"
         >
           <img
             src="/logo/ZEAL LOGO.png"
             alt="ZEAL Logo"
-            className="w-[20vw] md:w-[22vw] object-contain drop-shadow-[0_0_18px_rgba(0,0,0,0.9)]"
+            className="w-[60vw] sm:w-[48vw] md:w-[30vw] lg:w-[22vw] object-contain drop-shadow-[0_0_18px_rgba(0,0,0,0.9)]"
           />
         </motion.div>
 
-        {/* Glowing Subtitle – pulled closer to logo */}
+        {/* Glowing Subtitle – closer to logo & larger on mobile */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-4 mt-[-6px]"
+          className="mb-5 -mt-1"
         >
-         <span className="inline-flex items-center px-6 py-3 rounded-full bg-black/60 backdrop-blur-xl border border-white/30 font-display font-semibold text-[11px] md:text-sm tracking-[0.25em] uppercase text-white shadow-[0_0_28px_rgba(255,255,255,0.55)]">
-  Zenith of Engineering and Leadership
-</span>
-
+          <span className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-black/60 backdrop-blur-xl border border-white/30 font-display font-semibold text-[0.7rem] sm:text-xs md:text-sm tracking-[0.25em] uppercase text-white shadow-[0_0_28px_rgba(255,255,255,0.55)]">
+            Zenith of Engineering and Leadership
+          </span>
         </motion.p>
 
         {/* Date & Venue */}
@@ -59,21 +58,21 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex items-center justify-center mb-10"
+          className="flex items-center justify-center mb-8 sm:mb-10"
         >
-          <div className="inline-flex items-center gap-4 px-6 py-3 rounded-full bg-black/65 backdrop-blur-xl border border-white/25 shadow-[0_0_35px_rgba(0,0,0,0.9)] text-white">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 px-4 sm:px-6 py-3 rounded-full bg-black/65 backdrop-blur-xl border border-white/25 shadow-[0_0_35px_rgba(0,0,0,0.9)] text-white text-sm sm:text-base">
             <div className="flex items-center gap-2">
-              <Calendar className="w-5 h-5 text-pink-400" />
-              <span className="font-body text-base md:text-lg tracking-wide">
+              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-pink-400" />
+              <span className="font-body tracking-wide">
                 January 5th, 2026
               </span>
             </div>
 
-            <div className="w-px h-6 bg-white/30 hidden sm:block" />
+            <div className="hidden sm:block w-px h-6 bg-white/30" />
 
             <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-pink-400" />
-              <span className="font-body text-base md:text-lg tracking-wide">
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-pink-400" />
+              <span className="font-body tracking-wide">
                 Muthoot Institute of Technology &amp; Science
               </span>
             </div>
@@ -85,18 +84,18 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
         >
           <a
             href="https://forms.gle/XZGnDEGJXu9vip1p6"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block"
+            className="inline-block w-full sm:w-auto"
           >
             <Button
               variant="hero"
               size="xl"
-              className="group hover:shadow-[0_0_35px_#ff2d7a] hover:scale-105 transition-all duration-300"
+              className="group w-full sm:w-auto hover:shadow-[0_0_35px_#ff2d7a] hover:scale-105 transition-all duration-300"
             >
               <Sparkles className="w-5 h-5 group-hover:animate-spin" />
               Register Now
@@ -107,7 +106,7 @@ const HeroSection = () => {
             variant="outline"
             size="xl"
             onClick={scrollToTracks}
-            className="hover:shadow-[0_0_25px_#ffffff60] hover:scale-105 transition-all duration-300"
+            className="w-full sm:w-auto hover:shadow-[0_0_25px_#ffffff60] hover:scale-105 transition-all duration-300"
           >
             Explore Tracks
           </Button>
@@ -118,10 +117,10 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="flex flex-wrap items-center justify-center gap-16 mt-[100px]"
+          className="flex flex-wrap items-center justify-center gap-10 sm:gap-16 mt-12 sm:mt-[100px]"
         >
           {[wieLogo, ieeeLogo, mitsLogo, sponsorLogo].map((logo, i) => (
-            <div key={i} className="w-28 h-16 flex items-center justify-center">
+            <div key={i} className="w-24 h-12 sm:w-28 sm:h-16 flex items-center justify-center">
               <img src={logo} className="max-h-full max-w-full object-contain" />
             </div>
           ))}
