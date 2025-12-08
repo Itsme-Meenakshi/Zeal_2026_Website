@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import zealLogo from "/logo/ZEAL LOGO.png"; // ← import logo
 
 const Footer = () => {
   return (
@@ -11,14 +12,19 @@ const Footer = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col md:flex-row items-center justify-between gap-6"
         >
-          <div className="text-center md:text-left">
-            <h3 className="font-display text-2xl text-foreground mb-1">ZEAL </h3>
-            <p className="text-muted-foreground font-body text-sm">
+          {/* 🔥 ZEAL Logo instead of text */}
+          <div className="text-center md:text-left flex flex-col items-center md:items-start">
+            <img
+              src={zealLogo}
+              alt="ZEAL Logo"
+              className="w-[4vw] md:w-[4vw] max-w-[250px] object-contain drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]"
+            />
+            <p className="text-muted-foreground font-body text-sm mt-2">
               IEEE WIE AG MITS Initiative
             </p>
           </div>
 
-          {/* Updated Organized By */}
+          {/* Organized By */}
           <div className="flex items-center gap-4">
             <span className="text-muted-foreground font-body text-sm">
               Organized by
@@ -30,17 +36,18 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Contact / Link */}
           <div className="text-center md:text-right">
-            <a 
-              href="https://forms.gle/XZGnDEGJXu9vip1p6" 
-              target="_blank" 
+            <a
+              href="https://forms.gle/XZGnDEGJXu9vip1p6"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-primary-glow transition-colors font-body"
             >
               ieeesbmits.in
             </a>
             <p className="text-muted-foreground font-body text-sm mt-1">
-              © 2025 All rights reserved
+              © 2026 All rights reserved
             </p>
           </div>
         </motion.div>

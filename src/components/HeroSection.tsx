@@ -22,59 +22,39 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-
-      {/* Dark overlay */}
       <div className="absolute inset-0 hero-overlay" />
       <div className="magical-particles" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        {/* ZEAL – tall, tight like poster */}
-        <motion.h1
+        {/* 🔥 ZEAL LOGO IMAGE */}
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="mb-2 mt-[50px]"
-          style={{
-            fontFamily: '"Bebas Neue", system-ui, sans-serif',
-            fontWeight: 900,
-            textTransform: "uppercase",
-            fontSize: "18vw",          // big + vertical look
-            lineHeight: 0.82,
-            letterSpacing: "-0.07em",  // squeeze letters together hard
-            textRendering: "geometricPrecision",
-          }}
+          className="mt-[70px] mb-0 flex justify-center"
         >
-          <span
-            style={{
-              display: "inline-block",
-              transform: "scaleY(1.22)",           // stretch vertically
-              transformOrigin: "center",
-              background:
-                "linear-gradient(180deg, #ffffff 5%, #f7e6f0 40%, #ff2d7a 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              filter: "drop-shadow(0 0 6px rgba(0,0,0,0.7))",
-            }}
-          >
-            ZEAL
-          </span>
-        </motion.h1>
+          <img
+            src="/logo/ZEAL LOGO.png"
+            alt="ZEAL Logo"
+            className="w-[20vw] md:w-[22vw] object-contain drop-shadow-[0_0_18px_rgba(0,0,0,0.9)]"
+          />
+        </motion.div>
 
-        {/* Glowing Subtitle */}
+        {/* Glowing Subtitle – pulled closer to logo */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-8"
+          className="mb-4 mt-[-6px]"
         >
-          <span className="inline-flex items-center px-6 py-3 rounded-full bg-black/60 backdrop-blur-xl border border-white/30 font-display text-[11px] md:text-sm tracking-[0.35em] uppercase text-white shadow-[0_0_30px_rgba(255,255,255,0.55)]">
-            Zenith of Engineering and Leadership
-          </span>
+         <span className="inline-flex items-center px-6 py-3 rounded-full bg-black/60 backdrop-blur-xl border border-white/30 font-display font-semibold text-[11px] md:text-sm tracking-[0.25em] uppercase text-white shadow-[0_0_28px_rgba(255,255,255,0.55)]">
+  Zenith of Engineering and Leadership
+</span>
+
         </motion.p>
 
-        {/* Date & Venue – pill */}
+        {/* Date & Venue */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -133,19 +113,7 @@ const HeroSection = () => {
           </Button>
         </motion.div>
 
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-4 mt-[35px]"
-        >
-          <span className="inline-block px-4 py-2 rounded-full bg-primary/20 border border-primary/50 text-primary font-display text-sm tracking-widest uppercase">
-            IEEE WIE AG MITS Initiative
-          </span>
-        </motion.div>
-
-        {/* Logos – equal size */}
+        {/* Logos */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
