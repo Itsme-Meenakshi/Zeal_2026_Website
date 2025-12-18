@@ -3,7 +3,7 @@ import { Mail, Phone } from "lucide-react";
 
 const team = [
   {
-    name: "Ancy Joy",
+    name: "Ms.Ancy Joy",
     role: "Faculty Coordinator",
     phone: "9947390595",
     email: "ancyjoy@mgits.ac.in",
